@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS file here -->
+</head>
+
+<body>
+    <nav>
+        <button id="logout-btn">Log Out</button>
+    </nav>
+
+    <!-- Wrapper added here for responsive layout -->
+    <div class="dashboard-container">
+        <div class="create card">
+            <h3>Student Database</h3>
+            <input type="text" id="student-id" placeholder="Enter Student Id here">
+            <input type="text" id="student-name" placeholder="Full Name">
+            <input type="text" id="course-name" placeholder="Course">
+            <input type="date" id="date">
+            <button id="add-btn">Create</button>
+        </div>
+
+        <div class="mark-attendance card">
+            <h3>Manage & Attendance</h3>
+            <input type="text" id="search-id" placeholder="Enter Student Id here">
+            <button id="search-btn">Search</button>
+            <div class="attendance-actions">
+                <button id="present-btn">Mark as present</button>
+                <button id="absent-btn">Mark as absent</button>
+            </div>
+            <button id="update-btn">Update</button>
+            <button id="delete-btn">Delete</button>
+        </div>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+
+</html>

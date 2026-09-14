@@ -1,0 +1,146 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+#logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on small screens */
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Cards for both sections */
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1 1 350px; /* Base width of 350px, will grow to fill space */
+  width: 100%;
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #f4f6f9;
+  padding-bottom: 10px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+/* General Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition:
+    filter 0.3s,
+    transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+/* Specific Button Colors */
+#add-btn,
+#search-btn,
+#update-btn {
+  background-color: #0d6efd; /* Bootstrap Primary Blue */
+}
+
+#present-btn {
+  background-color: #198754; /* Success Green */
+}
+
+#absent-btn {
+  background-color: #fd7e14; /* Warning Orange */
+}
+
+#delete-btn {
+  background-color: #dc3545; /* Danger Red */
+  margin-top: 15px;
+}
+
+/* Side-by-side buttons for attendance */
+.attendance-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px 15px;
+  }
+
+  .attendance-actions {
+    flex-direction: column;
+    gap: 0;
+  }
+}
