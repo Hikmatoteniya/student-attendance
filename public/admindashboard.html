@@ -13,8 +13,9 @@
         <button id="logout-btn">Log Out</button>
     </nav>
 
-    <!-- Wrapper added here for responsive layout -->
-    <div class="dashboard-container">
+    <!-- ⚠️ FIX: Added id="dashboard-content" and style="display: none;" -->
+    <div class="dashboard-container" id="dashboard-content" style="display: none;">
+
         <div class="create card">
             <h3>Student Database</h3>
             <input type="text" id="student-id" placeholder="Enter Student Id here">
@@ -27,6 +28,10 @@
         <div class="mark-attendance card">
             <h3>Manage & Attendance</h3>
             <input type="text" id="search-id" placeholder="Enter Student Id here">
+
+            <!-- NEW: Date picker for attendance -->
+            <input type="date" id="attendance-date">
+
             <button id="search-btn">Search</button>
             <div class="attendance-actions">
                 <button id="present-btn">Mark as present</button>
